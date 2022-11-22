@@ -9,7 +9,7 @@ function CollapsibleExample() {
       <Container>
         <Navbar.Brand
           href="#home"
-          //   className="px-4 mx-4 "
+          // className="active"
           style={{
             color: "#b6795f",
             fontSize: "2.2rem",

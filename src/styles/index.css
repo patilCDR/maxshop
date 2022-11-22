@@ -4,3 +4,35 @@
 /* font-family: 'Crimson Pro', serif; */
 /* font-family: 'Dancing Script', cursive; */
 /* font-family: 'Fira Sans', sans-serif; */
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(1.1, 1.1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.img-slider {
+  -webkit-animation: zoom 5s;
+  animation: zoom 5s;
+}
+
+.carousel-caption {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 25%;
+  transition: transform(-25%);
+  line-height: 3rem;
+}
