@@ -1,4 +1,5 @@
 import React from "react";
+import Home from "./jsx/components/Home";
 import CarouselFadeExample from "./jsx/layouts/Carousel";
 import Navbar from "./jsx/layouts/Navbar";
 
@@ -7,6 +8,7 @@ const App = () => {
     <div>
       <Navbar />
       <CarouselFadeExample />
+      <Home />
       <center>Les's starts</center>
     </div>
   );
