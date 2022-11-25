@@ -5,12 +5,10 @@ import Navbar from "./jsx/layouts/Navbar";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <CarouselFadeExample />
       <Home />
-      <center>Les's starts</center>
-    </div>
+    </>
   );
 };
 

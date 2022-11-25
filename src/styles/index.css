@@ -36,3 +36,13 @@
   transition: transform(-25%);
   line-height: 3rem;
 }
+.nav-link {
+  color: #b6795f !important;
+}
+.nav-brand {
+  color: Black;
+  font-size: 2.2rem !important;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-family: "Crimson Pro", serif;
+}
