@@ -3,9 +3,10 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const Category = () => {
+const Category = ({ title = "Max Shop" }) => {
   return (
     <div>
+      <h1 className="text-center my-4">{title}</h1>
       <Container>
         <Row className="justify-content-md-center my-4">
           {infoItem.map((value, index) => (

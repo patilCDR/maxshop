@@ -1,13 +1,14 @@
 import React from "react";
 import CarouselFadeExample from "../../layouts/Carousel";
+import Banner from "./Banner";
 import Category from "./Category";
 
 const Home = () => {
   return (
     <>
       <CarouselFadeExample carouselItems={carouselItems} />
-      <Category />
-      {/* <CarouselFadeExample carouselItems={carouselItem} /> */}
+      <Category title="Categories" />
+      <Banner />
     </>
   );
 };
