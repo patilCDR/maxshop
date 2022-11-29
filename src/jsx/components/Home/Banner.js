@@ -33,20 +33,22 @@ const Banner = () => {
       ) : (
         <Row className="p-4 text-center">
           {data.products.map((value, index) => (
-            <Card
-              className="bg-light text-dark text-center m-2 col-4"
-              style={{ width: "24.5rem" }}
-            >
-              <Card.Header>{value.title}</Card.Header>
-              <Card.Img
-                src={value.thumbnail}
-                alt="Card image"
-                style={{ width: "23rem", height: "15rem" }}
-              />
-              <Card.Footer className="text-muted">
-                <Button variant="dark">Go somewhere</Button>
-              </Card.Footer>
-            </Card>
+            <Col>
+              <Card
+                className="bg-light text-dark text-center m-2 col-4"
+                style={{ width: "24.5rem" }}
+              >
+                <Card.Header>{value.title}</Card.Header>
+                <Card.Img
+                  src={value.thumbnail}
+                  alt="Card image"
+                  style={{ width: "23rem", height: "15rem" }}
+                />
+                <Card.Footer className="text-muted">
+                  <Button variant="dark">Go somewhere</Button>
+                </Card.Footer>
+              </Card>
+            </Col>
           ))}
         </Row>
       )}

@@ -26,20 +26,22 @@ const Products = () => {
       ) : (
         <Row className="p-4 text-center">
           {data.products.map((value, index) => (
-            <Card
-              className="bg-dark text-white text-center m-2 col-4"
-              style={{ width: "18rem" }}
-            >
-              <Card.Header>{value.title}</Card.Header>
-              <Card.Img
-                src={value.thumbnail}
-                alt="Card image"
-                style={{ width: "17rem", height: "15rem" }}
-              />
-              <Card.Footer className="text-muted">
-                <Button variant="light">Go somewhere</Button>
-              </Card.Footer>
-            </Card>
+            <Col>
+              <Card
+                className="bg-dark text-white text-center m-2"
+                style={{ width: "18rem" }}
+              >
+                <Card.Header>{value.title}</Card.Header>
+                <Card.Img
+                  src={value.thumbnail}
+                  alt="Card image"
+                  style={{ width: "17rem", height: "15rem" }}
+                />
+                <Card.Footer className="text-muted">
+                  <Button variant="light">Go somewhere</Button>
+                </Card.Footer>
+              </Card>
+            </Col>
           ))}
         </Row>
       )}

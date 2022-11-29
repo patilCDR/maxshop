@@ -9,11 +9,17 @@ const Table = () => {
       .then((response) => setData(response.data));
   }, []);
   return (
-    <div>
-      {data.products.map((value, index) => (
-        <li>{value.title}</li>
-      ))}
-    </div>
+    <>
+      {Object.keys(data).length === 0 ? (
+        <h1>LOADING</h1>
+      ) : (
+        <div>
+          {data.products.map((value, index) => (
+            <li>{value.title}</li>
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 

@@ -11,7 +11,7 @@ const Home = () => {
       <CarouselFadeExample carouselItems={carouselItems} />
       <Category title="Categories" />
       <Banner />
-      {/* <Table /> */}
+      <Table />
       <Products />
     </>
   );
