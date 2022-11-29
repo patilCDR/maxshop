@@ -46,3 +46,19 @@
   letter-spacing: 3px;
   font-family: "Crimson Pro", serif;
 }
+
+.banner-items {
+}
+
+.banner-item-list {
+  background-color: rgb(238, 237, 237);
+}
+
+.banner-item-list img {
+  object-fit: cover;
+  width: 15rem;
+  height: 15rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

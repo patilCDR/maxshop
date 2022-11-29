@@ -2,6 +2,8 @@ import React from "react";
 import CarouselFadeExample from "../../layouts/Carousel";
 import Banner from "./Banner";
 import Category from "./Category";
+import Products from "./Products";
+import Table from "./Table";
 
 const Home = () => {
   return (
@@ -9,6 +11,8 @@ const Home = () => {
       <CarouselFadeExample carouselItems={carouselItems} />
       <Category title="Categories" />
       <Banner />
+      <Products />
+      {/* <Table /> */}
     </>
   );
 };
