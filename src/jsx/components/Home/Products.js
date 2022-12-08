@@ -2,20 +2,23 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { useSelector, useDispatch } from "react-redux";
+import { getProducts } from "../../../store/actions/ProductActions";
 
 const Products = () => {
+  const dispatch = useDispatch();
   const [data, setData] = useState({});
 
-  useEffect(function () {
-    console.log("Effect ran");
-    fetch("https://dummyjson.com/products?limit=12")
-      .then((res) => res.json())
-      .catch((error) => alert("error found"))
-      .then((response) => {
-        // console.log(response)
-        setData(response);
-      });
-  }, []);
+  // useEffect(function () {
+  //   console.log("Effect ran");
+  //   fetch("https://dummyjson.com/products?limit=12")
+  //     .then((res) => res.json())
+  //     .catch((error) => alert("error found"))
+  //     .then((response) => {
+  //       // console.log(response)
+  //       setData(response);
+  //     });
+  // }, []);
 
   console.log(data, Object.keys(data), Object.keys(data).length);
 
