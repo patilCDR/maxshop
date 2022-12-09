@@ -9,6 +9,13 @@ const Products = () => {
   const dispatch = useDispatch();
   const [data, setData] = useState({});
 
+  const allProducts = useSelector((state) => state.products.getHomeProducts);
+  console.log("allProducts", allProducts);
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+
   // useEffect(function () {
   //   console.log("Effect ran");
   //   fetch("https://dummyjson.com/products?limit=12")
@@ -24,11 +31,11 @@ const Products = () => {
 
   return (
     <>
-      {Object.keys(data).length === 0 ? (
+      {!allProducts ? (
         <h1>LOADING</h1>
       ) : (
         <Row className="p-4 text-center">
-          {data.products.map((value, index) => (
+          {allProducts?.products.map((value, index) => (
             <Col>
               <Card
                 className="bg-dark text-white text-center m-2"
