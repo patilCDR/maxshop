@@ -6,6 +6,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 //Pages
 import App from "./App";
+import NewApp from "./jsx/Learn/NewApp";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
