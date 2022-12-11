@@ -33,7 +33,7 @@ const Banner = () => {
       ) : (
         <Row className="p-4 text-center">
           {data.products.map((value, index) => (
-            <Col>
+            <Col className="d-flex justify-content-center w-100">
               <Card
                 className="bg-light text-dark text-center m-2 col-4"
                 style={{ width: "24.5rem" }}

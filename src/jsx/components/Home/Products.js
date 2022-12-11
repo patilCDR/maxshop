@@ -2,16 +2,21 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+
+// "useDispatch" is used to send request to actions (like API calls etc)
+// "useSelector" is used to retrieve the data from provider
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../../../store/actions/ProductActions";
 
 const Products = () => {
+  // Initializing "dispatch" to "useDispatch"
   const dispatch = useDispatch();
   const [data, setData] = useState({});
 
   const allProducts = useSelector((state) => state.products.getHomeProducts);
   console.log("allProducts", allProducts);
 
+  // using "Dispatch" requesting data from "Actions"
   useEffect(() => {
     dispatch(getProducts());
   }, []);

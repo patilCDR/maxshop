@@ -1,20 +1,33 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { getProducts } from "../../../store/actions/ProductActions";
+
+import { useSelector, useDispatch } from "react-redux";
+import { getTableData } from "../../../store/actions/TableActions";
+
 const Table = () => {
+  const dispatch = useDispatch();
   const [data, setData] = useState([]);
+
+  const allTableData = useSelector((state) => state.table.getTable);
+  console.log("allTableData", allTableData);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("https://dummyjson.com/products?limit=10")
+  //     .then((response) => setData(response.data));
+  // }, []);
+
   useEffect(() => {
-    axios
-      .get("https://dummyjson.com/products?limit=10")
-      .then((response) => setData(response.data));
+    dispatch(getTableData());
   }, []);
+
   return (
     <>
-      {Object.keys(data).length === 0 ? (
+      {!allTableData ? (
         <h1>LOADING</h1>
       ) : (
         <div>
-          {data.products.map((value, index) => (
+          {allTableData?.products.map((value, index) => (
             <li>{value.title}</li>
           ))}
         </div>
@@ -24,64 +37,3 @@ const Table = () => {
 };
 
 export default Table;
-
-// import React, { useEffect, useState } from "react";
-// import { Container, Row, Col } from "react-bootstrap";
-
-// const Table = () => {
-//   const [data, setData] = useState({});
-
-//   useEffect(function () {
-//     console.log("Effect ran");
-//     fetch("https://dummyjson.com/products?limit=10")
-//       .then((res) => res.json())
-//       .catch((error) => alert("error found"))
-//       .then((response) => {
-//         // console.log(response)
-//         setData(response);
-//       });
-//   }, []);
-
-//   console.log(data, Object.keys(data), Object.keys(data).length);
-
-//   return (
-//     <>
-//       {Object.keys(data).length === 0 ? (
-//         <h1>LOADING</h1>
-//       ) : (
-//         <Row>
-//           <console>
-//             <table className="table table-bordered">
-//               <thead className="table-dark">
-//                 <tr>
-//                   <th scope="col">Sl.No</th>
-//                   <th scope="col">title</th>
-//                   <th scope="col">Price</th>
-//                   <th scope="col">Image</th>
-//                 </tr>
-//               </thead>
-//               {data.products.map((value, index) => (
-//                 <tbody>
-//                   <tr>
-//                     <th scope="row">{value.id}</th>
-//                     <td>{value.title}</td>
-//                     <td>{value.price}</td>
-//                     <td>
-//                       <img
-//                         src={value.thumbnail}
-//                         alt=""
-//                         style={{ height: "20px", weight: "20px" }}
-//                       />
-//                     </td>
-//                   </tr>
-//                 </tbody>
-//               ))}
-//             </table>
-//           </console>
-//         </Row>
-//       )}
-//     </>
-//   );
-// };
-
-// export default Table;
