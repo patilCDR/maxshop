@@ -45,7 +45,7 @@ function CollapsibleExample() {
               href="#features"
               className="justify-content-space-around px-4"
             >
-              <i class="bi bi-search"></i>
+              <i className="bi bi-search"></i>
             </Nav.Link>
           </Nav>
           <Nav>
@@ -54,7 +54,7 @@ function CollapsibleExample() {
               className="px-4"
               style={{ borderRight: "1px solid grey" }}
             >
-              <i class="bi bi-cart-fill"></i>
+              <i className="bi bi-cart-fill"></i>
             </Nav.Link>
             <Nav.Link
               eventKey={2}
@@ -62,7 +62,7 @@ function CollapsibleExample() {
               className="px-4"
               style={{ borderRight: "1px solid grey" }}
             >
-              <i class="bi bi-heart-fill "></i>
+              <i className="bi bi-heart-fill "></i>
             </Nav.Link>
             <hr />
             <Nav.Link
@@ -71,7 +71,7 @@ function CollapsibleExample() {
               className="px-4"
               style={{ borderRight: "1px solid grey" }}
             >
-              <i class="bi bi-person-circle"></i>
+              <i className="bi bi-person-circle"></i>
             </Nav.Link>
             <hr />
           </Nav>

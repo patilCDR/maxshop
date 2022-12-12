@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 import CartReducers from "./CartReducers";
+import ImageReducers from "./ImageReducers";
 import ProductReducers from "./ProductReducers";
 import TableReducers from "./TableReducers";
 
@@ -8,6 +9,7 @@ export default combineReducers({
   products: ProductReducers,
   table: TableReducers,
   cart: CartReducers,
+  images: ImageReducers,
 });
 
 // Syntax
