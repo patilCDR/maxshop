@@ -18,6 +18,7 @@ import App from "./App";
 import reducers from "./store/reducers";
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
