@@ -33,7 +33,7 @@ const Banner = () => {
       ) : (
         <Row className="p-4 text-center">
           {data.products.map((value, index) => (
-            <Col>
+            <Col className="d-flex justify-content-center w-100">
               <Card
                 className="bg-light text-dark text-center m-4 col-4"
                 style={{ width: "20.5rem" }}
@@ -42,7 +42,7 @@ const Banner = () => {
                 <Card.Img
                   src={value.thumbnail}
                   alt="Card image"
-                  style={{ width: "20.5rem", height: "15rem" }}
+                  style={{ width: "100%", height: "15rem" }}
                 />
                 <Card.Footer className="text-muted">
                   <Button variant="dark">Go somewhere</Button>

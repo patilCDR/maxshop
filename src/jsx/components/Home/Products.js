@@ -2,16 +2,21 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+
+// "useDispatch" is used to send request to actions (like API calls etc)
+// "useSelector" is used to retrieve the data from provider
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../../../store/actions/ProductActions";
 
 const Products = () => {
+  // Initializing "dispatch" to "useDispatch"
   const dispatch = useDispatch();
   const [data, setData] = useState({});
 
   const allProducts = useSelector((state) => state.products.getHomeProducts);
   console.log("allProducts", allProducts);
 
+  // using "Dispatch" requesting data from "Actions"
   useEffect(() => {
     dispatch(getProducts());
   }, []);
@@ -36,16 +41,13 @@ const Products = () => {
       ) : (
         <Row className="p-4 text-center">
           {allProducts?.products.map((value, index) => (
-            <Col>
-              <Card
-                className="bg-dark text-white text-center m-2"
-                style={{ width: "18rem" }}
-              >
+            <Col className="d-flex justify-content-center w-100">
+              <Card className=" text-center m-2" style={{ width: "18rem" }}>
                 <Card.Header>{value.title}</Card.Header>
                 <Card.Img
                   src={value.thumbnail}
                   alt="Card image"
-                  style={{ width: "10rem", height: "15rem" }}
+                  style={{ width: "100%", height: "15rem" }}
                 />
                 <Card.Footer className="text-muted">
                   <Button variant="light">Go somewhere</Button>

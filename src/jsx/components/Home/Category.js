@@ -5,13 +5,13 @@ import Col from "react-bootstrap/Col";
 
 const Category = ({ title = "Max Shop" }) => {
   return (
-    <div>
+    <>
       <h1 className="text-center my-4">{title}</h1>
       <Container>
         <Row className="justify-content-md-center my-4">
           {infoItem.map((value, index) => (
             <Col className="mb-2" sm key={value.id}>
-              <div className="py-3" style={{ border: "1px solid red" }}>
+              <div className="categories-border py-3">
                 <h5 className="text-center">
                   <i className={value.firstIcon}></i>
                   {value?.title}
@@ -22,7 +22,7 @@ const Category = ({ title = "Max Shop" }) => {
           ))}
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 

@@ -1,12 +1,12 @@
-import { getHomeProducts } from "../../services/ProductServices";
+import { getTable } from "../../services/TableServices";
 
-export const getProducts = () => (dispatch) => {
+export const getTableData = () => (dispatch) => {
   // we are calling API here
-  getHomeProducts()
+  getTable()
     .then((response) => {
       // If the API call is Success we are Connecting to "Reducer"
       dispatch({
-        type: "GET_HOME_PRODUCTS",
+        type: "GET_TABLE",
         payload: response.data,
       });
       return console.log(response);
