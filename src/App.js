@@ -5,6 +5,7 @@ import Home from "./jsx/components/Home";
 import Images from "./jsx/components/Home/Images";
 import CarouselFadeExample from "./jsx/layouts/Carousel";
 import Navbar from "./jsx/layouts/Navbar";
+import ProductDetails from "./jsx/pages/ProductDetails";
 
 const App = () => {
   return (
@@ -13,8 +14,9 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
-        <Cart />
+        {/* <Cart /> */}
         {/* <Images /> */}
       </BrowserRouter>
     </>

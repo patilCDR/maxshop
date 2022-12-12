@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 // "useSelector" is used to retrieve the data from provider
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../../../store/actions/ProductActions";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   // Initializing "dispatch" to "useDispatch"
@@ -50,7 +51,9 @@ const Products = () => {
                   style={{ width: "100%", height: "15rem" }}
                 />
                 <Card.Footer className="text-muted">
-                  <Button variant="light">Go somewhere</Button>
+                  <Link variant="light" to={`/product/${value.id}`}>
+                    Go somewhere
+                  </Link>
                 </Card.Footer>
               </Card>
             </Col>
