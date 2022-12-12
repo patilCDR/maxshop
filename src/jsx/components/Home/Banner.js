@@ -35,14 +35,14 @@ const Banner = () => {
           {data.products.map((value, index) => (
             <Col>
               <Card
-                className="bg-light text-dark text-center m-2 col-4"
-                style={{ width: "24.5rem" }}
+                className="bg-light text-dark text-center m-4 col-4"
+                style={{ width: "20.5rem" }}
               >
                 <Card.Header>{value.title}</Card.Header>
                 <Card.Img
                   src={value.thumbnail}
                   alt="Card image"
-                  style={{ width: "23rem", height: "15rem" }}
+                  style={{ width: "20.5rem", height: "15rem" }}
                 />
                 <Card.Footer className="text-muted">
                   <Button variant="dark">Go somewhere</Button>
