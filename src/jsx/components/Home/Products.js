@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 
 const Products = () => {
   // Initializing "dispatch" to "useDispatch"
+
   const dispatch = useDispatch();
   const [data, setData] = useState({});
 
