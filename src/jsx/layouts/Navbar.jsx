@@ -16,7 +16,7 @@ function CollapsibleExample() {
             {navItems.map((value, index) => (
               <Nav.Link
                 key={index}
-                href="/"
+                href="#/"
                 className="justify-content-space-around px-4 "
                 style={{
                   color: "#b6795f",
