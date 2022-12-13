@@ -25,7 +25,7 @@ const Images = () => {
         <h1>Loading</h1>
       ) : (
         <Row className="p-4 text-center">
-          {allImages?.images.map((value, index) => (
+          {allImages?.map((value, index) => (
             <Col className="d-flex justify-content-center w-100">
               <Card
                 className="bg-light text-dark text-center m-4 col-4"
