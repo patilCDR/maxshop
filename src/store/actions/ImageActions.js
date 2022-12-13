@@ -1,5 +1,5 @@
 import { getImageProducts } from "../../services/imageServices";
-import { imageData } from "../../services/data.js";
+import { imageData } from "../../utils/data";
 
 export const getImages = () => (dispatch) => {
   dispatch({

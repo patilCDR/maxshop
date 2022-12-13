@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import { imageData } from "../../../services/data";
+import { imageData } from "../../../utils/data";
 
 import { useSelector, useDispatch } from "react-redux";
 import { getImages } from "../../../store/actions/ImageActions";

@@ -1,4 +1,4 @@
-import { imageData } from "./data.js";
+import { imageData } from "../utils/data";
 
 export const getImageProducts = () => {
   console.log(imageData);
