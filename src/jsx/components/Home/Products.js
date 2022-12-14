@@ -15,7 +15,7 @@ const Products = () => {
   const dispatch = useDispatch();
   const [data, setData] = useState({});
 
-  const allProducts = useSelector((state) => state.products.getHomeProducts);
+  const allProducts = useSelector((state) => state?.products?.getHomeProducts);
   console.log("allProducts", allProducts);
 
   // using "Dispatch" requesting data from "Actions"

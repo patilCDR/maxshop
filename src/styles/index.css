@@ -23,6 +23,11 @@
   }
 }
 
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .img-slider {
   -webkit-animation: zoom 5s;
   animation: zoom 5s;
