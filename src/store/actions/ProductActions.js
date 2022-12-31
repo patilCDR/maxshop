@@ -14,6 +14,7 @@ export const getProducts = () => (dispatch) => {
       });
       return console.log(response);
     })
+
     // If not throw an error
     .catch((error) => {
       alert("Something went wrong");
@@ -30,6 +31,7 @@ export const getSingleProduct = (id) => (dispatch) => {
         type: "GET_SINGLE_PRODUCT",
         payload: response.data,
       });
+
       return console.log(response);
     })
     // If not throw an error

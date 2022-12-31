@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 
 const Products = () => {
   // Initializing "dispatch" to "useDispatch"
-
   const dispatch = useDispatch();
   const [data, setData] = useState({});
 
@@ -52,6 +51,7 @@ const Products = () => {
                   style={{ width: "100%", height: "15rem" }}
                 />
                 <Card.Footer className="text-muted">
+                  <Link variant="light" to={`/product/${value.id}`} />
                   <Link variant="light" to={`/product/${value.id}`}>
                     Go somewhere
                   </Link>

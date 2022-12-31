@@ -8,6 +8,7 @@ export default (state = {}, action) => {
           ...action.payload,
         },
       };
+
     case "GET_SINGLE_PRODUCT":
       console.log("productReducer", action.payload);
       return {
